@@ -1,2 +1,6 @@
+/preprocessed_behaviour.pkl
+/news_mf_model.pt
+/model_indices.pkl
+/saved_models/
 /lightning_logs/
-/data_set/
+/MINDsmall_train/
