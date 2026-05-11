@@ -1,6 +1,38 @@
-/preprocessed_behaviour.pkl
-/news_mf_model.pt
-/model_indices.pkl
-/saved_models/
-/lightning_logs/
-/MINDsmall_train/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Модели и данные (большие файлы)
+*.pt
+*.pkl
+*.tsv
+*.csv
+saved_models/
+lightning_logs/
+preprocessed_behaviour.pkl
+MINDsmall_train/
+MINDlarge_train/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Веб-файлы (если нужны в репозитории)
+node_modules/
+.env
+
+# Временные файлы
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
