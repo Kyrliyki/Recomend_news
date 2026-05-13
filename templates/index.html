@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекомендательная система новостей</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Рекомендательная система новостей</h1>
+            <p>Каскадная модель: Матричная факторизация + Контекстуальный бандит</p>
+        </header>
+
+        <!-- Панель выбора пользователя -->
+        <div class="panel" id="userPanel">
+            <h2>Выбор пользователя</h2>
+            <div class="user-select">
+                <select id="userSelect">
+                    <option value="">-- Загрузка пользователей... --</option>
+                </select>
+                <button id="startBtn" disabled>Начать сессию</button>
+            </div>
+        </div>
+
+        <!-- Панель сессии -->
+        <div class="panel" id="sessionPanel" style="display: none;">
+            <div class="session-header">
+                <div>
+                    <h2>Сессия</h2>
+                    <p>Пользователь: <strong id="currentUser"></strong></p>
+                </div>
+                <button id="endBtn" class="end-btn">Завершить сессию</button>
+            </div>
+
+            <!-- Статистика -->
+            <div class="stats-bar">
+                <div class="stat">
+                    <span class="stat-label">Кликнуто статей:</span>
+                    <span class="stat-value" id="clickedCount">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Раунд:</span>
+                    <span class="stat-value" id="roundCount">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Доступно:</span>
+                    <span class="stat-value" id="availableCount">0</span>
+                </div>
+            </div>
+
+            <!-- Рекомендации -->
+            <div class="recommendations-section">
+                <h3>Рекомендованные статьи</h3>
+                <div id="recommendationsContainer" class="recommendations-grid">
+                    <div class="loading">Загрузка рекомендаций...</div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="skipBtn" class="skip-btn">Пропустить</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Статистика сессии -->
+        <div class="panel" id="statsPanel" style="display: none;">
+            <h2>Статистика сессии</h2>
+            <div id="statsContent"></div>
+            <button id="closeStatsBtn" class="close-btn">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #7f8c8d;
+}
+
+.panel {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.panel h2 {
+    margin-bottom: 16px;
+    color: #2c3e50;
+    font-size: 1.5rem;
+}
+
+.panel h3 {
+    margin-bottom: 12px;
+    color: #34495e;
+}
+
+.user-select {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+select {
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#startBtn {
+    background: #27ae60;
+    color: white;
+}
+
+#startBtn:hover:not(:disabled) {
+    background: #219a52;
+}
+
+.end-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.end-btn:hover {
+    background: #c0392b;
+}
+
+.skip-btn {
+    background: #95a5a6;
+    color: white;
+}
+
+.skip-btn:hover {
+    background: #7f8c8d;
+}
+
+.close-btn {
+    background: #3498db;
+    color: white;
+}
+
+.close-btn:hover {
+    background: #2980b9;
+}
+
+.session-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.stats-bar {
+    display: flex;
+    gap: 24px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.stat {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+}
+
+.stat-label {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.recommendations-section {
+    margin-bottom: 24px;
+}
+
+.recommendations-grid {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.recommendation-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.recommendation-card:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.recommendation-card .rank {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: #3498db;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.recommendation-card .title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.recommendation-card .genre {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.recommendation-card .relevance {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #27ae60;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #7f8c8d;
+}
+
+.error {
+    text-align: center;
+    padding: 20px;
+    color: #e74c3c;
+    background: #fdf0ef;
+    border-radius: 8px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 12px;
+    }
+
+    .stats-bar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .stat {
+        flex: 1;
+        min-width: 100px;
+    }
+}
+.relevance {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #27ae60;
+    font-weight: 500;
+}
+
+.recommendation-card .title {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 8px 0;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+.loading::after {
+    content: '...';
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
