@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 import random
 from collections import defaultdict
-from config import DATA_PATH, RANDOM_SEED, NUM_USERS, NUM_INTERACTIONS_PER_USER
+from .config import DATA_PATH, RANDOM_SEED, NUM_USERS, NUM_INTERACTIONS_PER_USER
 
 
 class DataLoader:
